@@ -12,15 +12,14 @@
         include('koneksi.php');
         $id = $_GET['id'];
         
-        // Query untuk mendapatkan data anggota
+        
         $query = "SELECT * FROM anggota WHERE id = :id";
         
-        // Menyiapkan dan mengeksekusi query menggunakan PDO
+        
         $stmt = $koneksi->prepare($query);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         
-        // Mengambil hasil query
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
     ?>
     <div class="container mt-4">

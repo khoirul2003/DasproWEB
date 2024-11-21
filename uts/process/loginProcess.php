@@ -17,7 +17,6 @@ if (empty($username) || empty($password)) {
 } elseif ($username == "user" && $password == "User12") {
     $_SESSION['username'] = $username;
     $_SESSION['status'] = "login";
-    // header("Location: ../homePage.php");
     echo "<script>alert('Berhasil Login!'); window.location.href='../homePage.html';</script>";
     exit;
 } else {
